@@ -17,6 +17,7 @@ const args = [
 ];
 
 async function generateDetails() {
+    fsExtra.emptyDirSync('./cache')
     let details = await mail.generateAccount();
     let email = details.data.username;
     let emailPassword = details.data.password;
