@@ -1,13 +1,13 @@
 {
-    "name": "generate-mega-accounts",
-    "version": "1.0.0",
-    "description": "",
+    "name": "mega-account-generator",
+    "version": "1.0.2",
+    "description": "a script that generates mega accounts without any user input",
     "main": "index.js",
     "scripts": {
         "test": "node index.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "AKPR2007",
     "license": "ISC",
     "dependencies": {
         "@faker-js/faker": "^6.0.0-alpha.3",

@@ -17,6 +17,7 @@ const args = [
 ];
 
 async function generateDetails() {
+    fsExtra.emptyDirSync('./cache')
     let details = await mail.generateAccount();
     let email = details.data.username;
     let emailPassword = details.data.password;
@@ -64,7 +65,7 @@ generateDetails().then(details => {
         await page.click('.login-button');
         await browser.close();
         console.log('Successfully registered and verified account!\n');
-        console.log('Your can now login to mega with: \n E-mail: ${details.email} \n Password: ${details.password}');
+        console.log(`Your can now login to mega with: \n E-mail: ${details.email} \n Password: ${details.password}`);
         fsExtra.emptyDirSync('./cache');
     }
     register();
